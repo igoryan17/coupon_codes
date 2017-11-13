@@ -1,6 +1,6 @@
 package com.podliva.web.converrters;
 
-import com.podliva.models.CodeInformation;
+import com.podliva.db.models.CodeInformation;
 import com.podliva.web.models.CodeInformationDto;
 import org.springframework.core.convert.converter.Converter;
 import org.springframework.stereotype.Component;

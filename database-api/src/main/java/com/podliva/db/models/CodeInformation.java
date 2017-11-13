@@ -1,4 +1,4 @@
-package com.podliva.models;
+package com.podliva.db.models;
 
 
 import org.springframework.data.annotation.Id;
@@ -11,12 +11,13 @@ public class CodeInformation {
     @Id
     private String id;
     private String name;
-    @Indexed(unique = true)
+    @Indexed
     private String code;
 
     public CodeInformation() {}
 
-    public CodeInformation(String name, String code) {
+    public CodeInformation(String id, String name, String code) {
+        this.id = id;
         this.name = name;
         this.code = code;
     }

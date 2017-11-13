@@ -13,7 +13,7 @@ import java.util.Map;
 @Configuration
 @PropertySource("classpath:web.properties")
 @ComponentScan("com.podliva.web")
-public class Config {
+public class WebConfiguration {
     @Autowired
     Environment env;
 
