@@ -33,9 +33,7 @@ public class CouponSaver implements CommandLineRunner {
     @Override
     public void run(String... strings) throws Exception {
         List<CodeInformationDto> codeInformationDtos = couponLoaderService.loadCodes(Provider.PAPA_JONS);
-        LOGGER.info("{}\nloaded", codeInformationDtos);
         List<CodeInformation> codeInformations = codeInformationDtoToEntityConverter.convert(codeInformationDtos);
-        List<CodeInformation> saved = codeRepository.save(codeInformations);
-        LOGGER.info("{}\nsaved", saved);
+        codeRepository.save(codeInformations);
     }
 }
